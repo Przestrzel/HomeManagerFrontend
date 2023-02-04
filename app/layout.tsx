@@ -1,18 +1,23 @@
-import './globals.css'
+import SideBar from '@/components/sidebar/SideBar'
+import { Inter } from '@next/font/google'
+import './globals.scss'
+
+interface Props {
+  children: React.ReactNode
+}
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Props) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html className={inter.className} lang="en">
       <head />
-      <body>{children}</body>
+      <body>
+        <SideBar />
+        {children}
+      </body>
     </html>
   )
 }
