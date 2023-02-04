@@ -5,23 +5,23 @@ import HomeIcon from '@mui/icons-material/Home';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 import DescriptionIcon from '@mui/icons-material/Description';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { routes } from '@/utils/config.utils';
 
 export default function SideBar() {
-  const router = useRouter();
-
-  const route = (path: string) => {
-    router.push(path);
-  }
-
   return <div className={styles.sidebar}>
     <div>
-      <HomeIcon className={styles.homeIcon} onClick={() => route(routes.home)} />
-      <DescriptionIcon onClick={() => route(routes.budget)} />
+      <Link href={routes.home}>
+        <HomeIcon className={styles.homeIcon} />
+      </Link>
+      <Link href={routes.budget}>
+        <DescriptionIcon />
+      </Link>
     </div>
     <div>
-      <SettingsIcon onClick={() => route(routes.settings)} />
+      <Link href={routes.settings}>
+        <SettingsIcon />
+      </Link>
       <LogoutIcon onClick={() => null} />
     </div>
   </div>
