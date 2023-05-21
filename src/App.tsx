@@ -1,8 +1,9 @@
 import React from 'react';
+import RouterProvider from './providers/RouterProvider';
 
 function App() {
   return (
-    <div>Allow</div>
+    <RouterProvider />
   );
 }
 
