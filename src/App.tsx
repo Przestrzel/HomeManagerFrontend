@@ -1,9 +1,12 @@
 import React from 'react';
 import RouterProvider from './providers/RouterProvider';
+import Layout from './components/layout/Layout';
 
 function App() {
   return (
-    <RouterProvider />
+    <Layout>
+      <RouterProvider />
+    </Layout>
   );
 }
 

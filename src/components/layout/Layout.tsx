@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactComponent as Background } from 'assets/svg/background.svg';
-import styles from './Layout.module.scss';
 
 interface Props {
   children: React.ReactNode;
