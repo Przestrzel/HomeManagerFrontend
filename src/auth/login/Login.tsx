@@ -11,7 +11,7 @@ const Login = () => {
       <Typography color='#259732' variant='h4'>
         Home Manager
       </Typography>
-      <ControlledInput label='Login' name='login' control={ control } />
+      <ControlledInput label='E-mail' name='email' control={ control } />
     </Container>
   );
 };
