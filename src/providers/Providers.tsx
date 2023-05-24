@@ -1,10 +1,13 @@
 import React from 'react';
 import { IChildrenProps } from '../types/components.types';
 import MuiThemeProvider from './MuiThemeProvider';
+import { BrowserRouter } from 'react-router-dom';
 const Providers = ({ children }: IChildrenProps) => {
   return (
     <MuiThemeProvider>
-      { children }
+      <BrowserRouter>
+        { children }
+      </BrowserRouter>
     </MuiThemeProvider>
   );
 };
