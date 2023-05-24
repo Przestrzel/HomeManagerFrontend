@@ -1,14 +1,11 @@
 import React from 'react';
-
-interface Props {
-  children: React.ReactNode;
-}
-
-const Providers = ({ children }: Props) => {
+import { IChildrenProps } from '../types/components.types';
+import MuiThemeProvider from './MuiThemeProvider';
+const Providers = ({ children }: IChildrenProps) => {
   return (
-    <>
+    <MuiThemeProvider>
       { children }
-    </>
+    </MuiThemeProvider>
   );
 };
 

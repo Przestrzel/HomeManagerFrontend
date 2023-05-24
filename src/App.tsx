@@ -1,12 +1,15 @@
 import React from 'react';
 import RouterProvider from './providers/RouterProvider';
 import Layout from './components/layout/Layout';
+import Providers from './providers/Providers';
 
 function App() {
   return (
-    <Layout>
-      <RouterProvider />
-    </Layout>
+    <Providers>
+      <Layout>
+        <RouterProvider />
+      </Layout>
+    </Providers>
   );
 }
 
